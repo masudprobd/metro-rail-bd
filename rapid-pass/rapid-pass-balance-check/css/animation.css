@@ -1,0 +1,14 @@
+.blink-soft {
+    animation: blinker 4.5s linear infinite;
+    color:rgb(19, 65, 1);
+    text-align:center;
+    font-weight: bold;
+    font-size:18px;    
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
