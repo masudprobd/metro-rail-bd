@@ -1,0 +1,15 @@
+.blink-soft {
+    animation: blinker 4.5s linear infinite;
+    color:#152f4f;
+    text-align:center;
+    font-weight: bold;
+    font-size:40px;
+    font-family: "Baloo Da 2", sans-serif;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
