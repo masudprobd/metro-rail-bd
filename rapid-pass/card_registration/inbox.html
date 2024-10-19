@@ -8,11 +8,112 @@
 
 
     <style>
-    
-    body{
-        padding: 30px;
 
+
+:root {
+    --ppsbox-success-color: #3acd99;
+    --ppsbox-danger-color: #ff3535;
+    --ppsbox-warning-color: #ffd341;
+    --chat-logo: url(../img/chat-icon.png);
+}
+   
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;        
+}
+
+  
+.shine-box {
+    position: relative;
+    overflow: hidden;
+    align-items: center;        
+    text-decoration: none;        
+}
+
+.shine-box:before {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 120px;
+    height: 500px;
+    background: rgb(255 255 255 / 0.6);
+}
+
+@-webkit-keyframes shine {
+    from {
+        left: -500px;
     }
+    to {
+        left: 655px;
+    }
+}
+@keyframes shine {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 655px;
+    }
+}
+
+
+.shine-box-before-avtive::before {
+    content: "";
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    transform: skew(-50deg);
+    -webkit-animation: shine 3s ease infinite;
+    animation: shine 3s ease infinite;
+}
+
+.mbl-prem-btn {
+    background-color: #daa804;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 30px 60px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 50px;
+            border-radius: 10px;
+            font-family: "Noto Sans Bengali", sans-serif;
+            margin: 4px 2px;
+            cursor: pointer;
+     
+    }
+
+    .mbl-prem-btn:hover {
+            background-color: #04AA6D;
+            color: white;            
+        }
+
+
+.mbl-navbar-btns {
+        background: #3acd99;
+        font-size: 14px;
+        padding: 6px 10px;
+        text-align: center;
+        border-radius: 4px;
+       
+    }
+
+.mcbdshine a:link, 
+.mcbdshine a:active {
+text-decoration: none;
+} 
+
+   
+body{
+    padding: 30px;
+
+}
+
+
+
+ 
         .button {
             background-color: #daa804;
             /* Green */
@@ -29,23 +130,9 @@
 
         }
 
-        .button1 {
-            background-color: #f3e305;
-            ;
-            color: black;
-            text-align: center;
-            font-family: "Noto Sans Bengali", sans-serif;
-            border: 2px solid #ffffff;
-            text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-                0px 8px 13px rgba(0, 0, 0, 0.1),
-                0px 18px 23px rgba(0, 0, 0, 0.1);
-        }
 
-        .button1:hover {
-            background-color: #04AA6D;
-            color: white;
-        }
 
+   
 
 
         body,
@@ -97,11 +184,19 @@
             <p style="text-align: justify;">৫। অনলাইন রেজিষ্ট্রেশনের ২৪ ঘন্টা পর আপনার নিবন্ধন প্রক্রিয়া সম্পন্ন বলে বিবেচিত হবে।</p>
 
             <br />
-     <center> <a href="https://rapidpass.com.bd/bn/index.php/welcome/registration_procedure"><button class="button button1"> রেজিষ্ট্রেশন </button></a>
-           </center></div>
-    </div>
+ 
+    
+    
+    </div> 
+    
+    <center>  
+        <div class="mcbdshine"> 
+        <a class="shine-box shine-box-before-avtive d-flex mbl-prem-btn" href="https://rapidpass.com.bd/bn/index.php/welcome/registration_procedure">
+            রেজিষ্ট্রেশন </a>  
+        </div>
+    </center>
 
-
+</div>
 </body>
 
 </html>
