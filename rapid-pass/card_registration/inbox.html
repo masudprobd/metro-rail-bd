@@ -8,68 +8,69 @@
 
 
     <style>
+        :root {
+            --ppsbox-success-color: #3acd99;
+            --ppsbox-danger-color: #ff3535;
+            --ppsbox-warning-color: #ffd341;
+            --chat-logo: url(../img/chat-icon.png);
+        }
+
+        .d-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            text-decoration: none;
+        }
 
 
-:root {
-    --ppsbox-success-color: #3acd99;
-    --ppsbox-danger-color: #ff3535;
-    --ppsbox-warning-color: #ffd341;
-    --chat-logo: url(../img/chat-icon.png);
-}
-   
-.d-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-decoration: none;        
-}
+        .shine-box {
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+            text-decoration: none;
+        }
 
-  
-.shine-box {
-    position: relative;
-    overflow: hidden;
-    align-items: center;        
-    text-decoration: none;        
-}
+        .shine-box:before {
+            position: absolute;
+            top: 0;
+            left: -500px;
+            width: 120px;
+            height: 500px;
+            background: rgb(255 255 255 / 0.6);
+        }
 
-.shine-box:before {
-    position: absolute;
-    top: 0;
-    left: -500px;
-    width: 120px;
-    height: 500px;
-    background: rgb(255 255 255 / 0.6);
-}
+        @-webkit-keyframes shine {
+            from {
+                left: -500px;
+            }
 
-@-webkit-keyframes shine {
-    from {
-        left: -500px;
-    }
-    to {
-        left: 655px;
-    }
-}
-@keyframes shine {
-    from {
-        left: -500px;
-    }
-    to {
-        left: 655px;
-    }
-}
+            to {
+                left: 655px;
+            }
+        }
+
+        @keyframes shine {
+            from {
+                left: -500px;
+            }
+
+            to {
+                left: 655px;
+            }
+        }
 
 
-.shine-box-before-avtive::before {
-    content: "";
-    -webkit-transform: skew(-50deg);
-    -ms-transform: skew(-50deg);
-    transform: skew(-50deg);
-    -webkit-animation: shine 3s ease infinite;
-    animation: shine 3s ease infinite;
-}
+        .shine-box-before-avtive::before {
+            content: "";
+            -webkit-transform: skew(-50deg);
+            -ms-transform: skew(-50deg);
+            transform: skew(-50deg);
+            -webkit-animation: shine 3s ease infinite;
+            animation: shine 3s ease infinite;
+        }
 
-.mbl-prem-btn {
-    background-color: #daa804;
+        .mbl-prem-btn {
+            background-color: #daa804;
             /* Green */
             border: none;
             color: white;
@@ -82,38 +83,38 @@
             font-family: "Noto Sans Bengali", sans-serif;
             margin: 4px 2px;
             cursor: pointer;
-     
-    }
 
-    .mbl-prem-btn:hover {
+        }
+
+        .mbl-prem-btn:hover {
             background-color: #04AA6D;
-            color: white;            
+            color: white;
         }
 
 
-.mbl-navbar-btns {
-        background: #3acd99;
-        font-size: 14px;
-        padding: 6px 10px;
-        text-align: center;
-        border-radius: 4px;
-       
-    }
+        .mbl-navbar-btns {
+            background: #3acd99;
+            font-size: 14px;
+            padding: 6px 10px;
+            text-align: center;
+            border-radius: 4px;
 
-.mcbdshine a:link, 
-.mcbdshine a:active {
-text-decoration: none;
-} 
+        }
 
-   
-body{
-    padding: 30px;
-
-}
+        .mcbdshine a:link,
+        .mcbdshine a:active {
+            text-decoration: none;
+        }
 
 
+        body {
+            padding: 30px;
 
- 
+        }
+
+
+
+
         .button {
             background-color: #daa804;
             /* Green */
@@ -132,7 +133,7 @@ body{
 
 
 
-   
+
 
 
         body,
@@ -175,28 +176,35 @@ body{
 <body>
 
     <div id="container" class="bg">
-        <div class="no-data">           
-            <h2> র‌্যাপিড পাস কার্ড নিবন্ধন</h2>         
-            <p style="text-align: justify;">১। ওয়েবসাইট থেকে রেজিষ্ট্রেশন বাটনে ক্লিক করে আপনার র‍্যাপিড পাস কার্ড নম্বর ও ইমেইল প্রদান করে সাবমিট করুন।</p>
-            <p style="text-align: justify;">২। ইমেইলে প্রাপ্ত টোকেন নম্বরটি ব্যবহার করে ভেরিফিকেশন সম্পূর্ণ করুন।</p>
-            <p style="text-align: justify;">৩। র‍্যাপিড পাস নিবন্ধন ফর্ম যথাযথভাবে পূরণ করুন এবং সাবমিট করুন।</p>
-            <p style="text-align: justify;">৪। রেজিষ্ট্রেশন সম্পন্ন হলে আপনার ইমেইল এ পাঠানো ফর্মটি সংরক্ষণ করুন।</p>
-            <p style="text-align: justify;">৫। অনলাইন রেজিষ্ট্রেশনের ২৪ ঘন্টা পর আপনার নিবন্ধন প্রক্রিয়া সম্পন্ন বলে বিবেচিত হবে।</p>
+        <div class="no-data">
+            <h2> র‌্যাপিড পাস কার্ড নিবন্ধন</h2>
+            <p style="text-align: justify;color: #00ff2a;"> আপনার যদি র‍্যাপিড পাস কার্ড থাকে এবং রেজিষ্ট্রেশন করে না থাকেন তাহলে আপনার
+                কার্ড নম্বর এবং ইমেইল দিয়ে নিবন্ধন করতে পারবেন।</p> <br/>
+                <p style="text-align: justify;">১। ওয়েবসাইট থেকে রেজিষ্ট্রেশন বাটনে ক্লিক করে আপনার র‍্যাপিড পাস কার্ড
+                    নম্বর ও ইমেইল প্রদান করে সাবমিট করুন।</p>
+                <p style="text-align: justify;">২। ইমেইলে প্রাপ্ত টোকেন নম্বরটি ব্যবহার করে ভেরিফিকেশন সম্পূর্ণ করুন।
+                </p>
+                <p style="text-align: justify;">৩। র‍্যাপিড পাস নিবন্ধন ফর্ম যথাযথভাবে পূরণ করুন এবং সাবমিট করুন।</p>
+                <p style="text-align: justify;">৪। রেজিষ্ট্রেশন সম্পন্ন হলে আপনার ইমেইল এ পাঠানো ফর্মটি সংরক্ষণ করুন।
+                </p>
+                <p style="text-align: justify;">৫। অনলাইন রেজিষ্ট্রেশনের ২৪ ঘন্টা পর আপনার নিবন্ধন প্রক্রিয়া সম্পন্ন বলে
+                    বিবেচিত হবে।</p>
 
-            <br />
- 
-    
-    
-    </div> 
-    
-    <center>  
-        <div class="mcbdshine"> 
-        <a class="shine-box shine-box-before-avtive d-flex mbl-prem-btn" href="https://rapidpass.com.bd/bn/index.php/welcome/registration_procedure">
-            রেজিষ্ট্রেশন </a>  
+                <br />
+
+
+
         </div>
-    </center>
 
-</div>
+        <center>
+            <div class="mcbdshine">
+                <a class="shine-box shine-box-before-avtive d-flex mbl-prem-btn"
+                    href="https://rapidpass.com.bd/bn/index.php/welcome/registration_procedure">
+                    রেজিষ্ট্রেশন </a>
+            </div>
+        </center>
+
+    </div>
 </body>
 
 </html>
