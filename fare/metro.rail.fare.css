@@ -1,0 +1,74 @@
+:root {
+    --ppsbox-success-color: #3acd99;
+    --ppsbox-danger-color: #ff3535;
+    --ppsbox-warning-color: #ffd341;
+    --chat-logo: url(../img/chat-icon.png);
+}
+   
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;        
+}
+
+  
+.shine-box {
+    position: relative;
+    overflow: hidden;
+    align-items: center;        
+    text-decoration: none;        
+}
+
+.shine-box:before {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 120px;
+    height: 500px;
+    background: rgb(255 255 255 / 0.6);
+}
+
+@-webkit-keyframes shine {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 655px;
+    }
+}
+@keyframes shine {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 655px;
+    }
+}
+
+
+.shine-box-before-avtive::before {
+    content: "";
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    transform: skew(-50deg);
+    -webkit-animation: shine 3s ease infinite;
+    animation: shine 3s ease infinite;
+}
+
+.mbl-prem-btn {
+        width: auto!important;
+        background: linear-gradient(45deg, #ff0a02, #00b698) !important;
+        height: auto;
+        margin: 10px;
+        border-left: 1px solid #eee;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 14px;         
+    }
+
+
+.mcbdshine a:link, 
+.mcbdshine a:active {
+text-decoration: none;
+}  
